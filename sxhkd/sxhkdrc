@@ -1,0 +1,74 @@
+
+
+
+# Program launcher
+super + d
+	rofi -show run
+
+super + Return
+	termite
+
+super + b
+	chromium
+
+super + w 
+	rofi -show window
+
+super + e 
+    termite -e nvim
+
+# Kill window
+super + {_, shift + }c
+	bspc node -{c}
+
+# Restart bspwm
+super + shift + {q,r}
+        bspc {quit,wm -r}
+
+# Monocle 
+super + m
+	bspc desktop -l next
+
+super + {g, n}
+	bspc config -d focused window_gap {95,10}
+
+# Toggle 
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Moving window
+uper + {x,shift + }{Left,Down,Up,Right}
+	bspc node -f {west,south,north,east}
+
+super + {p,q,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+super + ctrl + space
+	bspc node -p cancel
+
+# Resize window
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+super + shift + {h,j,k,l}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+
+
