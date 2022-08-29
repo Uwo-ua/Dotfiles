@@ -17,6 +17,9 @@ super + w
 super + e 
     termite -e nvim
 
+super + p 
+    flameshot gui
+
 # Kill window
 super + {_, shift + }c
 	bspc node -{c}
@@ -39,9 +42,6 @@ super + {t,shift + t,s,f}
 # Moving window
 uper + {x,shift + }{Left,Down,Up,Right}
 	bspc node -f {west,south,north,east}
-
-super + {p,q,comma,period}
-	bspc node -f @{parent,brother,first,second}
 
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
