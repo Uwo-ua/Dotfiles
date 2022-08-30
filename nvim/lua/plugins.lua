@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
     use 'majutsushi/tagbar'
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
     use 'xiyaowong/nvim-transparent'
     use 'nvim-lualine/lualine.nvim'
     use 'nvim-treesitter/nvim-treesitter'
