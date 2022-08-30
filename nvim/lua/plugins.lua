@@ -27,7 +27,6 @@ return require('packer').startup(function(use)
     use { 'lewis6991/nvim-treesitter-context' }
     use 'wuelnerdotexe/vim-astro'
     use { 'SmiteshP/nvim-gps' }
-    use 'aserowy/tmux.nvim'
     use 'projekt0n/github-nvim-theme'
     use 'mattn/emmet-vim'
     use {'akinsho/bufferline.nvim', tag = "v2.*"}
