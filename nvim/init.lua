@@ -10,21 +10,21 @@ require('tabline')
 
 -- OR setup with some options
 require("nvim-tree").setup({
-  sort_by = "case_sensitive",
-  view = {
-    adaptive_size = true,
-    mappings = {
-      list = {
-        { key = "u", action = "dir_up" },
-      },
+    sort_by = "case_sensitive",
+    view = {
+        adaptive_size = true,
+        mappings = {
+            list = {
+                { key = "u", action = "dir_up" },
+            },
+        },
     },
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
+    renderer = {
+        group_empty = true,
+    },
+    filters = {
+        dotfiles = true,
+    },
 })
 
 require'alpha'.setup(require'alpha.themes.dashboard'.config)
@@ -37,16 +37,13 @@ require'FTerm'.setup({
         width = 0.9,
     },
 })
-
-local neogit = require('neogit')
-
-neogit.setup {}
-
-neogit.open({ "commit" })
-
--- open with split kind
-neogit.open({ kind = "split" })
-
--- open home directory
-neogit.open({ cwd = "~" })
+require("luasnip.loaders.from_vscode").lazy_load()
+vim.g.coq_settings = {
+    keymap = {
+        jump_to_mark = "", -- no jump_to_mark mapping
+    },
+    clients = {
+        snippets = { enabled = false }, -- disable coq snippets
+    },
+}
 

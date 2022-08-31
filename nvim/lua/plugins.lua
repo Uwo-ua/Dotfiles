@@ -29,7 +29,11 @@ return require('packer').startup(function(use)
     use 'wuelnerdotexe/vim-astro'
     use { 'SmiteshP/nvim-gps' }
     use 'projekt0n/github-nvim-theme'
+    use "rafamadriz/friendly-snippets"
+    use 'L3MON4D3/LuaSnip'
+    use { 'mendes-davi/coq_luasnip' }
     use 'mattn/emmet-vim'
+    use 'navarasu/onedark.nvim'
     use {'akinsho/bufferline.nvim', tag = "v2.*"}
     use 'nvim-lua/plenary.nvim'
     use 'zakuro9715/vim-vtools'
