@@ -1,11 +1,12 @@
 require 'nvim-treesitter.configs'.setup {
     highlight = {
         enable = true,
-        additional_vim_regex_highlighting = false,
+        additional_vim_regex_highlighting = true,
     },
     matchup = {
         enable = false,
     },
+    autopairs = { enable = true },
     ensure_installed = {
         "javascript",
         "typescript",
@@ -29,6 +30,18 @@ require 'nvim-treesitter.configs'.setup {
         enable = true,
         extended_mode = true,
         max_file_lines = nil,
+    },
+    refactor = {
+        smart_rename = { enable = true, keymaps = { smart_regame = "grr" } },
+        highlight_definitions = { enable = true },
+        navigation = {
+            enable = true,
+            keymaps = {
+                goto_definition_lsp_fallback = "gnd",
+                goto_next_usage = "<a-*>", -- is this redundant?
+                goto_previous_usage = "<a-#>", -- also this one?
+            },
+        },
     },
     playground = {
         enable = true,
@@ -92,3 +105,5 @@ require("indent_blankline").setup {
     show_end_of_line = true,
     space_char_blankline = " ",
 }
+
+require('nvim-highlight-colors').setup {}

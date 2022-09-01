@@ -7,7 +7,6 @@ require('lsp')
 require('navic')
 require('tabline')
 require('autopairs')
-
 -- Nvim Tree
 
 -- OR setup with some options
@@ -53,9 +52,7 @@ local telescope = require('telescope')
 telescope.setup {
     defaults = {
         layout_config = {
-            width = 0.75,
             prompt_position = "top",
-            preview_cutoff = 120,
             horizontal = { mirror = false },
             vertical = { mirror = false }
         },
@@ -101,11 +98,11 @@ telescope.setup {
 }
 
 require("luasnip.loaders.from_vscode").lazy_load()
-vim.g.coq_settings = {
-    keymap = {
-        jump_to_mark = "", -- no jump_to_mark mapping
+
+require("null-ls").setup({
+    sources = {
+        require("null-ls").builtins.formatting.stylua,
+        require("null-ls").builtins.completion.spell,
     },
-    clients = {
-        snippets = { enabled = false }, -- disable coq snippets
-    },
-}
+    debug = true,
+})
