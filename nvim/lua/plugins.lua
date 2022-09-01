@@ -1,7 +1,6 @@
+vim.cmd [[packadd packer.nvim]]
 
-vim.cmd[[packadd packer.nvim]]
-
-return require('packer').startup(function(use)
+return require('packer').startup({ function(use)
     use 'jiangmiao/auto-pairs'
     use 'wbthomason/packer.nvim' -- Package manager
     use 'neovim/nvim-lspconfig'
@@ -11,7 +10,7 @@ return require('packer').startup(function(use)
     use 'ms-jpq/coq.artifacts'
     use 'ms-jpq/coq.thirdparty'
     use 'kkharji/lspsaga.nvim'
-    use 'goolord/alpha-nvim'  
+    use 'goolord/alpha-nvim'
     use 'akinsho/toggleterm.nvim'
     use 'gbrlsnchs/telescope-lsp-handlers.nvim'
     use 'kyazdani42/nvim-web-devicons'
@@ -22,27 +21,37 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'nvim-treesitter/nvim-treesitter-refactor'
+    use 'nvim-treesitter/nvim-treesitter-textobjects'
+    use 'nvim-treesitter/playground'
     use { 'p00f/nvim-ts-rainbow' }
+    use 'nvim-treesitter/nvim-treesitter'
+    use "folke/twilight.nvim"
     use { 'lukas-reineke/indent-blankline.nvim' }
     use { 'JoosepAlviste/nvim-ts-context-commentstring' }
     use { 'lewis6991/nvim-treesitter-context' }
     use 'wuelnerdotexe/vim-astro'
-    use { 'SmiteshP/nvim-gps' }
     use 'projekt0n/github-nvim-theme'
     use "rafamadriz/friendly-snippets"
     use 'L3MON4D3/LuaSnip'
     use { 'mendes-davi/coq_luasnip' }
     use 'mattn/emmet-vim'
     use 'navarasu/onedark.nvim'
-    use {'akinsho/bufferline.nvim', tag = "v2.*"}
+    use { 'akinsho/bufferline.nvim', tag = "v2.*" }
     use 'nvim-lua/plenary.nvim'
     use 'zakuro9715/vim-vtools'
-    use {'nvim-telescope/telescope.nvim', tag = '0.1.0'}
-    use "numToStr/FTerm.nvim"
-    use 'Chiel92/vim-autoformat'
+    use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
     use 'ap/vim-css-color'
-    use {'iamcco/markdown-preview.nvim'}
-end)
-
-
-
+    use 'feline-nvim/feline.nvim'
+    use 'SmiteshP/nvim-navic'
+    use "lukas-reineke/lsp-format.nvim"
+    use 'windwp/nvim-autopairs'
+    use 'windwp/nvim-ts-autotag'
+    use { 'iamcco/markdown-preview.nvim' }
+end,
+    config = {
+        display = {
+            open_fn = function()
+                return require('packer.util').float({ border = 'single' })
+            end
+        }
+    } })
