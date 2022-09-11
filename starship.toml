@@ -1,0 +1,9 @@
+
+
+format = "[$directory](purple bold)[](green bold) "
+right_format = "$time"
+
+[time]
+disabled = false
+format = '[$time](bold white) '
+time_format = "%R"
