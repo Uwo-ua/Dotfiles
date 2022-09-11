@@ -1,4 +1,3 @@
-vim.cmd('packadd nvim-lsp')
 require('setting')
 require('plugins')
 require('mapping')
@@ -6,7 +5,6 @@ require('treesitter')
 require('lsp')
 require('navic')
 require('tabline')
-require('autopairs')
 -- Nvim Tree
 
 -- OR setup with some options
@@ -96,13 +94,3 @@ telescope.setup {
         },
     }
 }
-
-require("luasnip.loaders.from_vscode").lazy_load()
-
-require("null-ls").setup({
-    sources = {
-        require("null-ls").builtins.formatting.stylua,
-        require("null-ls").builtins.completion.spell,
-    },
-    debug = true,
-})

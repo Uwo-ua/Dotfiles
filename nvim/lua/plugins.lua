@@ -7,9 +7,6 @@ return require('packer').startup({ function(use)
     use 'williamboman/nvim-lsp-installer'
     use 'neovim/nvim-lsp'
     use "ray-x/lsp_signature.nvim"
-    use { 'ms-jpq/coq_nvim', run = 'python3 -m coq deps' }
-    use 'ms-jpq/coq.artifacts'
-    use 'ms-jpq/coq.thirdparty'
     use 'kkharji/lspsaga.nvim'
     use 'folke/lsp-colors.nvim'
     use 'goolord/alpha-nvim'
@@ -17,10 +14,20 @@ return require('packer').startup({ function(use)
     use 'gbrlsnchs/telescope-lsp-handlers.nvim'
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp-signature-help'
+    use 'saadparwaiz1/cmp_luasnip'
+    use 'quangnguyen30192/cmp-nvim-ultisnips'
+    use 'hrsh7th/cmp-vsnip'
     use 'majutsushi/tagbar'
+    use 'saecki/crates.nvim'
     use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
     use 'xiyaowong/nvim-transparent'
     use 'nvim-lualine/lualine.nvim'
+    use 'gelguy/wilder.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'nvim-treesitter/nvim-treesitter-refactor'
     use 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -36,7 +43,7 @@ return require('packer').startup({ function(use)
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
     use 'L3MON4D3/LuaSnip'
-    use { 'mendes-davi/coq_luasnip' }
+    use 'onsails/lspkind.nvim'
     use 'mattn/emmet-vim'
     use 'navarasu/onedark.nvim'
     use { 'akinsho/bufferline.nvim', tag = "v2.*" }
@@ -49,6 +56,7 @@ return require('packer').startup({ function(use)
     use 'SmiteshP/nvim-navic'
     use 'jose-elias-alvarez/null-ls.nvim'
     use "lukas-reineke/lsp-format.nvim"
+    use 'sbdchd/neoformat'
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
     use { 'iamcco/markdown-preview.nvim' }

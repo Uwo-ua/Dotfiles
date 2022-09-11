@@ -14,6 +14,7 @@ require 'nvim-treesitter.configs'.setup {
         "html",
         "lua",
         "v",
+        "haskell",
         "css",
         "scss",
         "toml",

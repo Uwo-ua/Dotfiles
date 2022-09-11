@@ -30,6 +30,11 @@ require("github-theme").setup({
     -- other config
 })
 
+--    cmd[[
+--     highlight MyGroup gui=bold
+--     match MyGroup /./
+--     ]]
+
 cmd([[
 filetype indent plugin on
 syntax enable
@@ -45,6 +50,8 @@ autocmd!
 autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup end
 ]], false)
+
+g.neoformat_try_node_exe = 1
 
 -- Neovide
 
