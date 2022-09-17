@@ -6,16 +6,21 @@ super + d
 	rofi -show run
 
 super + Return
-	termite
+	st
 
 super + b
-	chromium
-
+    firefox 
+    
 super + w 
 	rofi -show window
 
 super + e 
     termite -e nvim
+
+super + x
+    killal polybar 
+super + u 
+    polybar
 
 super + p 
     flameshot gui
@@ -40,7 +45,7 @@ super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Moving window
-uper + {x,shift + }{Left,Down,Up,Right}
+uper + {shift + }{Left,Down,Up,Right}
 	bspc node -f {west,south,north,east}
 
 super + {_,shift + }{1-9,0}

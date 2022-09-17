@@ -2,14 +2,14 @@
 
 
 
-sxhkd & picom & nitrogen --restore & polybar &
+sxhkd & picom & feh --bg-scale ~/.config/bspwm/0216.jpg & polybar &
 
 
 
 bspc monitor -d     
 
 
-bspc config border_width         1
+bspc config border_width         0
 bspc config window_gap          12
 
 
@@ -31,7 +31,7 @@ bspc config pointer_modifier	super
 bspc config automatic_scheme	spiral
 
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a termite state=floating rectangle=400x400+400+400  follow=off
+bspc rule -a st state=floating rectangle=400x400+400+400  follow=off
 bspc rule -a Chromium desktop='^2'
 # bspc rule -a mplayer2 state=floating
 # bspc rule -a Kupfer.py focus=on
