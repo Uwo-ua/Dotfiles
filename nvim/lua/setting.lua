@@ -25,10 +25,12 @@ opt.listchars:append "eol:↴"
 opt.termguicolors = true
 cmd [[ set t_Co=256 ]]
 --cmd'colorscheme github_dark_colorblind'
-require("github-theme").setup({
-    theme_style = "dark_default",
-    -- other config
-})
+
+vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+
+require("catppuccin").setup()
+
+vim.cmd [[colorscheme catppuccin]]
 
 --    cmd[[
 --     highlight MyGroup gui=bold
@@ -61,3 +63,13 @@ cmd([[
     ]])
 
 g.astro_typescript = true
+
+cmd([[
+if exists('g:vscode')
+    " VSCode extension
+else
+    " ordinary neovim
+endif
+]])
+
+

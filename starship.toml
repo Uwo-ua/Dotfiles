@@ -1,6 +1,6 @@
 
 
-format = "[$directory](purple bold)[](green bold) "
+format = "[$directory](purple bold)[](pink bold) "
 right_format = "$time"
 
 [time]

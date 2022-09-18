@@ -38,6 +38,7 @@ return require('packer').startup({ function(use)
     use { 'JoosepAlviste/nvim-ts-context-commentstring' }
     use { 'lewis6991/nvim-treesitter-context' }
     use 'wuelnerdotexe/vim-astro'
+    use { "catppuccin/nvim", as = "catppuccin" }
     use 'projekt0n/github-nvim-theme'
     use "rafamadriz/friendly-snippets"
     use 'hrsh7th/vim-vsnip'
@@ -60,6 +61,7 @@ return require('packer').startup({ function(use)
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
     use { 'iamcco/markdown-preview.nvim' }
+    use 'easymotion/vim-easymotion'
 end,
     config = {
         display = {

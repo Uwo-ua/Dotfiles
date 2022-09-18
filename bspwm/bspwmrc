@@ -2,7 +2,7 @@
 
 
 
-sxhkd & picom & feh --bg-scale ~/.config/bspwm/0216.jpg & polybar &
+sxhkd & picom & feh --bg-scale ~/.config/bspwm/wall1.jpg & polybar &
 
 
 
@@ -29,6 +29,8 @@ bspc config focus_follows_pointer true
 bspc config pointer_modifier	super
 
 bspc config automatic_scheme	spiral
+
+xsetroot -cursor_name left_ptr
 
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a st state=floating rectangle=400x400+400+400  follow=off
