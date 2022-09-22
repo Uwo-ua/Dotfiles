@@ -11,7 +11,6 @@ g.tagbar_sort = 0
 
 cmd([[set mouse=a]])
 cmd([[set noswapfile]])
-require("transparent").setup({ enable = true })
 
 opt.cursorline = true
 opt.spelllang = { 'en_us', 'ru' }
