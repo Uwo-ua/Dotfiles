@@ -70,8 +70,9 @@ source ./Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 clear
-diyfetch
-  
+ 
+weather-fetch $APPID 'Kryvyi Rih, ua'
+
 eval "$(starship init zsh)"
 
 export FONTFACE="Terminus"
