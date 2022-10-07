@@ -44,8 +44,6 @@ alias lv="lvim"
 
 alias bat='bat --theme="Catppuccin-mocha"'
 
-alias notes='vim `fzf --preview="bat --color=always --style=header,grid --line-range :300 {}" --preview-window=right:70%:wrap`'
-
 alias inst="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
 
 DISABLE_LS_COLORS="true"
