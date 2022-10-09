@@ -37,6 +37,8 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
+alias sd="sudo"
+
 alias mk="mkdir"
 
 alias v="nvim"
