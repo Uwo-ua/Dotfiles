@@ -2,14 +2,14 @@
 
 
 
-sxhkd & picom & feh --bg-scale ~/.config/bspwm/wall1.jpg & polybar &
+sxhkd & picom & polybar & dunst & feh --bg-scale /home/uwo/.config/bspwm/arch-chan_to.png & 
 
 
 
 bspc monitor -d     
 
 
-bspc config border_width         0
+bspc config border_width         2
 bspc config window_gap          12
 
 

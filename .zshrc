@@ -37,14 +37,16 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
-alias sd="sudo"
-
 alias mk="mkdir"
+
+alias sd="sudo"
 
 alias v="nvim"
 alias lv="lvim"
 
 alias bat='bat --theme="Catppuccin-mocha"'
+
+alias notes='vim `fzf --preview="bat --color=always --style=header,grid --line-range :300 {}" --preview-window=right:70%:wrap`'
 
 alias inst="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
 
@@ -57,9 +59,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(
 	git
 	rust
-	zsh-autocomplete
 	zsh-autosuggestions
-	zsh-syntax-highlighting
 	web-search
 	dirhistory
 	)
@@ -69,10 +69,9 @@ source $ZSH/oh-my-zsh.sh
 source ./Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-clear
- 
-weather-fetch $APPID 'Kryvyi Rih, ua'
-
+afetch
+# weather-fetch 62314f1473541c1f3267909ddea20e63 'Kryvyi Rih, ua'
+  
 eval "$(starship init zsh)"
 
 export FONTFACE="Terminus"
