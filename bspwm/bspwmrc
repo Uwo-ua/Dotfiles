@@ -1,15 +1,11 @@
 #! /bin/sh
 
-
-
-sxhkd & picom & polybar & dunst & feh --bg-scale /home/uwo/.config/bspwm/arch-chan_to.png & 
-
-
+run () { ! pgrep -x "$1" > /dev/null && "$@"; }
 
 bspc monitor -d     
 
 
-bspc config border_width         2
+bspc config border_width         0
 bspc config window_gap          12
 
 
@@ -33,8 +29,16 @@ bspc config automatic_scheme	spiral
 xsetroot -cursor_name left_ptr
 
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a st state=floating rectangle=400x400+400+400  follow=off
+bspc rule -a St desktop=^1 state=floating rectangle=400x400+400+400  follow=on
 bspc rule -a Chromium desktop='^2'
-# bspc rule -a mplayer2 state=floating
 # bspc rule -a Kupfer.py focus=on
 # bspc rule -a Screenkey manage=off
+
+run sxhkd & 
+run picom & 
+run polybar & 
+run dunst & feh --bg-scale /home/uwo/.config/bspwm/arch-chan_to.png & 
+run xsettingsd &
+run unclutter --timeout 3 &
+
+

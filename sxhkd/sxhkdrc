@@ -6,7 +6,7 @@ super + d
 	rofi -show run
 
 super + Return
-	st
+    st -w ''
 
 super + b
     firefox 
@@ -17,13 +17,15 @@ super + w
 super + e 
     termite -e nvim
 
-super + x
-    killal polybar 
-super + u 
-    polybar
-
 super + p 
     flameshot gui
+
+super + alt + d 
+    ./power
+
+# Lockscreen
+super + shift + x
+  betterlockscreen -l dim --blur 0.5
 
 # Kill window
 super + {_, shift + }c
@@ -45,7 +47,7 @@ super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Moving window
-uper + {shift + }{Left,Down,Up,Right}
+super + {shift + }{Left,Down,Up,Right}
 	bspc node -f {west,south,north,east}
 
 super + {_,shift + }{1-9,0}
