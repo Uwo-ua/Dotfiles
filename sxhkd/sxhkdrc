@@ -1,6 +1,3 @@
-
-
-
 # Program launcher
 super + d
 	rofi -show run
