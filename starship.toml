@@ -1,4 +1,4 @@
-
+# Starship theme
 
 format = "[$directory](bold)[>](#a6e3a1 bold)[>](#f9e2af bold)[>](#f38ba8 bold) "
 right_format = "$time"
