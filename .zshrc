@@ -69,7 +69,7 @@ source $ZSH/oh-my-zsh.sh
 source ./Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-afetch
+neofetch
 # weather-fetch 62314f1473541c1f3267909ddea20e63 'Kryvyi Rih, ua'
   
 eval "$(starship init zsh)"
