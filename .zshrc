@@ -29,6 +29,13 @@ export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 
 bindkey -s '^f' 'nvim $(fzf)\n'
 
+alias /="cd /"
+alias ~="cd ~"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......='cd ../../../../..'
 
 alias ls=' exa --icons --tree --level=2 ' # my preferred listing
 alias lp='  exa --icons '
@@ -38,6 +45,8 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 alias mk="mkdir"
+
+alias nconf='cd $HOME/.config/nvim'
 
 alias sd="sudo"
 
@@ -70,7 +79,6 @@ source ./Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 neofetch
-# weather-fetch 62314f1473541c1f3267909ddea20e63 'Kryvyi Rih, ua'
   
 eval "$(starship init zsh)"
 
