@@ -1,9 +1,27 @@
 
 
-format = "[$directory](pink bold)[»](blue bold) "
+format = "[$directory](bold)[>](#a6e3a1 bold)[>](#f9e2af bold)[>](#f38ba8 bold) "
 right_format = "$time"
 
 [time]
 disabled = false
-format = '[$time](bold white) '
-time_format = "%R"
+time_format = "%R" # Hour:Minute Format
+style = "fg:#f5e0dc"
+format = "[| $time|]($style)"
+
+[directory]
+style = "fg:#89b4fa"
+format = "[|$path|]($style)"
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = ""
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+".config" = ""
+"fonts" = ""
+"OneDrive" = ""
+"onedrive" = ""
+
+
