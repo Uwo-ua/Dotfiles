@@ -17,19 +17,6 @@ vim.opt.smartcase = true
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
 
-vim.opt.title = true
-vim.opt.titlestring = "%<%F%=%l/%L - nvim"
-
-
-vim.opt.listchars:append 'space:'
-vim.opt.listchars:append "eol:↴"
-
-vim.cmd([[
-  set t_ZH=^[[3m
-  set t_ZR=^[[23m
-  highlight Comment cterm=italic
-]])
-
 lvim.leader = "space"
 lvim.keys.normal_mode["ft"] = ":Telescope find_files<cr>"
 lvim.keys.normal_mode["lr"] = ":lua vim.lsp.buf.rename()<cr>"
